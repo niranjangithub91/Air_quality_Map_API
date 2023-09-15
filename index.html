@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Create a draggable Marker</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+<link href="../static/map.css" rel="stylesheet">
+</head>
+<body>
+<style>
+    .coordinates {
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        position: absolute;
+        bottom: 40px;
+        left: 10px;
+        padding: 5px 10px;
+        margin: 0;
+        font-size: 11px;
+        line-height: 18px;
+        border-radius: 3px;
+    }
+</style>
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
+<div id="geocoder"></div>
+<h1 class="heading">AIR QUALITY</h1>
+ <div id="map"></div>
+ <pre id="coordinates" class="coordinates"></pre>
+ <h2 class="pollution">POLLUTION LEVEL</h2>
+ <div class="CO">
+    <h3>CO concentration and aqi</h3>
+    <div class="CO_1" id="CO_1"></div>
+ </div>
+ <div class="NO2">
+    <h3>NO2 concentration and aqi</h3>
+    <div class="NO2_1" id="NO2_1"></div>
+ </div>
+ <div class="O3">
+    <h3>O3 concentration and aqi</h3>
+    <div class="O3_1" id="O3_1"></div>
+ </div>
+ <div class="PM10">
+    <h3>PM10 concentration and aqi</h3>
+    <div class="PM10_1" id="PM10_1"></div>
+ </div>
+ <div class="SO2">
+    <h3>SO2 concentration and aqi</h3>
+    <div class="SO2_1" id="SO2_1"></div>
+ </div>
+ <div class="AQI">
+    <h2>OVERALL AQI</h2>
+    <div class="AQI_1" id="AQI_1"></div>
+ </div>
+</body>
+<script src="../static/geocoder.js"></script>
+<script src="../static/map.js"></script>
+<script type="module" src="../static/pollution.js"></script>
+</html>
